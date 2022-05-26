@@ -23,7 +23,7 @@ namespace TestBot.Controllers
             return new BallModel
             {
                 bowingType = BowlingType.Outswinger,
-                bowlerName = "Rohit",
+                bowlerName = "Sachin",
                 bowlerType = BowlerTypes.RAF,
                 speed = 140,
                 zone = BallPitchZone.zone1
