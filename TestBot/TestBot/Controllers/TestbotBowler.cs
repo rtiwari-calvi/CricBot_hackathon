@@ -10,6 +10,7 @@ using TestBot.Bowling;
 using TestBot.Fielding;
 using TestBot.Match;
 
+
 namespace TestBot.Controllers
 {
     [Route("api/CricketBot")]
@@ -20,15 +21,9 @@ namespace TestBot.Controllers
         [Route("GetNextBall")]
         public BallModel GetNextBall()
         {
-            return new BallModel
-            {
-                bowingType = BowlingType.Outswinger,
-                bowlerName = "Sachin",
-                bowlerType = BowlerTypes.RAF,
-                speed = 140,
-                zone = BallPitchZone.zone1
-            };
+            return BowlingService.getBowlingData();
         }
+
 
         [HttpPost]
         [Route("PostBalldata")]
